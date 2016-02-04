@@ -1,5 +1,9 @@
 @extends('/app')
 
+@section('title')
+    Button
+@endsection
+
 @section('content')
 <div class="button-meta-data">
     name of button
@@ -8,7 +12,11 @@
 
 <div class="round-button">
     <div class="round-button-circle">
-        <a href="http://button.localhost" class="round-button-link">button</a>
+        <button id="button" class="responsive-circle-button"></button>
     </div>
 </div>
+@endsection
+
+@section('foot-script')
+    <script src="/js/script.js"></script>
 @endsection

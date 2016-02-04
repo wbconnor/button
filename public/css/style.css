@@ -18,23 +18,18 @@ body {
     background: #CC0000;
     box-shadow: 0 0 3px black;
 }
-.round-button-circle:hover {
+.responsive-circle-button:hover {
     background:#b70000;
 }
-.round-button a {
+.responsive-circle-button {
     display:block;
     float:left;
+    background: #CC0000;
+    border:none;
     width:100%;
     padding-top:50%;
     padding-bottom:50%;
-    line-height:1em;
-    margin-top:-0.5em;
-    text-align:center;
     color:#e2eaf3;
-    font-family:Verdana;
-    font-size:1.2em;
-    font-weight:bold;
-    text-decoration:none;
 }
 
 .button-meta-data {
@@ -45,6 +40,14 @@ body {
     font-weight:bold;
     text-decoration:none;
     margin: 3em 0;
+}
+.round-button-link {
+    color:#e2eaf3;
+    font-family:Verdana;
+    text-align:center;
+    font-size:1.2em;
+    font-weight:bold;
+    text-decoration:none;
 }
 
 .clicks {
