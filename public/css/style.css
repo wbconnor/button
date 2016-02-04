@@ -30,6 +30,16 @@ body {
     padding-top:50%;
     padding-bottom:50%;
     color:#e2eaf3;
+
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+
+.responsive-circle-button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 .button-meta-data {
