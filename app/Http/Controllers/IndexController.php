@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\TextColorPicker;
+
 class IndexController extends Controller
 {
 
@@ -10,8 +12,11 @@ class IndexController extends Controller
         //
     }
 
+
+
     public function index()
     {
+        // array of web safe colors - move these to db?
         $array_of_websafe_colors = [
             '#000000','#000033','#000066','#000099','#0000CC','#0000FF','#003300','#003333','#003366','#003399',
             '#0033CC','#0033FF','#006600','#006633','#006666','#006699','#0066CC','#0066FF','#009900','#009933',
@@ -63,7 +68,12 @@ class IndexController extends Controller
 
         $new_color = $array_of_websafe_colors[mt_rand(0, count($array_of_websafe_colors) - 1)];
         $find_color = $array_of_websafe_colors[mt_rand(0, count($array_of_websafe_colors) - 1)];
+
+        $new_text_color = TextColorPicker::textColorFor($new_color);
+        $find_text_color = TextColorPicker::textColorFor($find_color);
+
+        return view('index', compact('new_color', 'find_color', 'new_text_color', 'find_text_color'));
     }
 
-    //
+
 }

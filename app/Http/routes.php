@@ -11,6 +11,4 @@
 |
 */
 
-$app->get('/', function () {
-    return view('index');
-});
+$app->get('/', 'IndexController@index');

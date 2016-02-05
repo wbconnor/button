@@ -1,5 +1,12 @@
+
+/*
+ * media query large screens = 504 px
+ *
+*/
+
 body {
     background: #323232;
+    font-family:Verdana;
 }
 
 .button-container {
@@ -7,13 +14,12 @@ body {
     max-width: 50%;
     min-width: 5em;
     height: 15em;
-    margin: 0 auto;
+    margin: 3em auto;
 }
 
 .circle-button {
     width: 100%;
     height: 100%;
-
     display: inline-block;
     padding: 15px 25px;
     cursor: pointer;
@@ -31,12 +37,33 @@ body {
     transform: translateY(4px);
 }
 
+.index-button {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding: 15px 25px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 15em;
+    box-shadow: 0 7px #5a5a5a;
+    font-size:1.2em;
+    font-weight:bold;
+    font-family:Verdana;
+    text-decoration:none;
+}
+
+.index-button:active {
+    box-shadow: 0 4px #5a5a5a;
+    transform: translateY(4px);
+}
+
 .button-meta-data {
     color:#e2eaf3;
-    font-family:Verdana;
     text-align:center;
     font-size:1.2em;
     font-weight:bold;
+    font-family:Verdana;
     text-decoration:none;
     margin: 3em 0;
 }
