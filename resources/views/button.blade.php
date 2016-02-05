@@ -1,9 +1,5 @@
 @extends('/app')
 
-@section('title')
-    Button
-@endsection
-
 @section('content')
 <div class="button-meta-data">
     name of button
