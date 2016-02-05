@@ -4,7 +4,14 @@
  * 20160204
  */
 
-document.getElementById("button").addEventListener("click", btn_clicked);
+//document.getElementById("button").addEventListener("click", btn_clicked);
+
+document.getElementById("new_button").addEventListener("click", function(){
+    window.location.href = "/new";
+});
+document.getElementById("find_button").addEventListener("click", function(){
+    window.location.href = "/find";
+});
 
 function btn_clicked() {
 

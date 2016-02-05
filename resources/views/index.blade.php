@@ -16,5 +16,5 @@
 @endsection
 
 @section('foot-script')
-    <!-- <script src="/js/script.js"></script> -->
+    <script src="/js/script.js"></script>
 @endsection
