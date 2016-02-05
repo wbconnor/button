@@ -11,8 +11,6 @@ body {
 
 .button-container {
     width: 15em;
-    max-width: 50%;
-    min-width: 5em;
     height: 15em;
     margin: 3em auto;
 }
@@ -56,6 +54,33 @@ body {
 .index-button:active {
     box-shadow: 0 4px #5a5a5a;
     transform: translateY(4px);
+}
+
+.round-button {
+    width:15em;
+}
+.round-button-circle {
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    overflow:hidden;
+    cursor: pointer;
+    box-shadow: 0 7px #5a5a5a;
+}
+.round-button a {
+    display:block;
+    float:left;
+    width:100%;
+    padding-top:50%;
+    padding-bottom:50%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    font-family:Verdana;
+    font-size:1.2em;
+    font-weight:bold;
+    text-decoration:none;
 }
 
 .button-meta-data {
