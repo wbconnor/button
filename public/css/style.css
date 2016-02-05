@@ -2,43 +2,32 @@ body {
     background: #323232;
 }
 
-.round-button {
+.button-container {
     width: 15em;
-    max-width:50%;
-    min-width: 6em;
+    max-width: 50%;
+    min-width: 5em;
+    height: 15em;
     margin: 0 auto;
 }
-.round-button-circle {
+
+.circle-button {
     width: 100%;
-    height:0;
-    padding-bottom: 100%;
-    border-radius: 50%;
-    border:10px solid #7f7f7f;
-    overflow:hidden;
-    background: #CC0000;
-    box-shadow: 0 0 3px black;
-}
-.responsive-circle-button:hover {
-    background:#b70000;
-}
-.responsive-circle-button {
-    display:block;
-    float:left;
-    background: #CC0000;
-    border:none;
-    width:100%;
-    padding-top:50%;
-    padding-bottom:50%;
-    color:#e2eaf3;
+    height: 100%;
 
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
+    display: inline-block;
+    padding: 15px 25px;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #ca2128;
+    border: none;
+    border-radius: 15em;
+    box-shadow: 0 7px #7a1519;
 }
 
-
-.responsive-circle-button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
+.circle-button:active {
+    background-color: #ca2128;
+    box-shadow: 0 4px #7a1519;
     transform: translateY(4px);
 }
 
@@ -50,14 +39,6 @@ body {
     font-weight:bold;
     text-decoration:none;
     margin: 3em 0;
-}
-.round-button-link {
-    color:#e2eaf3;
-    font-family:Verdana;
-    text-align:center;
-    font-size:1.2em;
-    font-weight:bold;
-    text-decoration:none;
 }
 
 .clicks {
