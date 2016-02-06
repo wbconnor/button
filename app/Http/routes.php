@@ -14,5 +14,6 @@
 $app->get('/', 'IndexController@index');
 
 $app->get('/new', 'ButtonController@create');
+
 $app->get('/find', 'ButtonController@find');
 $app->post('/find', 'ButtonController@search');

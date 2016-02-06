@@ -2,21 +2,20 @@
 
 @section('content')
 
-    <div class="round-button">
-        <div class="round-button-circle" style="background-color: {{ $new_color }}">
-            <a href="/new" class="round-button" style="color: {{ $new_text_color }}">
-                Make A New Button!
-            </a>
-        </div>
-    </div>
+    <form action="/new" method="post">
+        <label>
+            What would you like to name your button?
+        </label>
+        <input type="text" name="name">
 
-    <div class="round-button">
-        <div class="round-button-circle" style="background-color: {{ $find_color }}">
-            <a href="/find" class="round-button" style="color: {{ $find_text_color }}">
-                I Already Have A Button!
-            </a>
-        </div>
-    </div>
+        <label>
+            Want to protect your button with a password?
+        </label>
+        <input type="password">
+        
+        <input type="submit">
+    </form>
+
 @endsection
 
 @section('foot-script')
