@@ -15,7 +15,7 @@
             <label>
                 Want to protect your button with a password?
             </label>
-            <input type="password">
+            <input type="password" name="password">
         </div>
 
         <input type="submit">

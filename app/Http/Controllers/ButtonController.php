@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Button;
 use Input;
 
 class ButtonController extends Controller
@@ -12,9 +13,40 @@ class ButtonController extends Controller
         //
     }
 
+    // load form to create a new resource
     public function create()
     {
         return view('create');
+    }
+
+    // store a new resource from form input
+    public function store()
+    {
+        // get the form input
+        $input = Input::all();
+
+        // check if a button with the same name already exists
+        if(!Button::where('name', $input['name'])->first())
+        {
+            // continue with creating a new button if one does not exist
+            dd('not button');
+        }
+        else
+        {
+            // alert the  user a button already exists
+            // TODO: return to previous screen with data
+
+            // display the existing button to the user
+            dd(Button::where('name', $input['name'])->first());
+        }
+
+        if($input['password'])
+        {
+            dd($input['password']);
+        }
+
+        Button::create($input);
+        dd(Button::all());
     }
 
     public function find()

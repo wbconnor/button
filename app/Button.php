@@ -17,32 +17,4 @@ Class Button extends Model
         'created_at',
         'updated_at',
     ];
-
-    /*
-     * Query Scopes
-     */
-    public function scopeDateRange($query, $range)
-    {
-        if (!empty($range))
-        {
-            return $query->where('created_at', '>=', $range);
-        }
-        else
-        {
-            return $query;
-        }
-    }
-
-    public function scopeByOrderNumber($query, $orderNumber)
-    {
-        if (!empty($orderNumber))
-        {
-            return $query->where('order_number', $orderNumber);
-        }
-        else
-        {
-            return $query;
-        }
-    }
-
 }
