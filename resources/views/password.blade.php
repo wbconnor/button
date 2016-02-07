@@ -2,20 +2,23 @@
 
 @section('content')
 
-    <form action="/find" method="post" class="form-horizontal" id="findButtonForm">
+        <div>
+            {{ $button->name }} is password protected!
+        </div>
+    <!-- /p/ + button_name ?? -->
+    <form action="/p/{{ $button->name }}" method="post" class="form-horizontal" id="newButtonForm">
 
         <div class="controls-group">
             <label class="control-label">
-                What's your button's name?
+                Enter a password to proceed
             </label>
 
             <div class="controls">
-                <input type="text" name="name" tabindex="1">
+                <input type="password" name="password" tabindex="2">
             </div>
         </div>
 
         <input type="submit">
-
     </form>
 
 @endsection

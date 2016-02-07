@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Button;
+use Hash;
 use Input;
 
 class ButtonController extends Controller
@@ -28,6 +29,9 @@ class ButtonController extends Controller
         // check if a button with the same name already exists
         if(!Button::where('name', $input['name'])->first())
         {
+            // hash password
+            $input['password'] = Hash::make($input['password']);
+
             // continue with creating a new button if one does not exist
             $button = Button::create($input);
 
@@ -53,10 +57,37 @@ class ButtonController extends Controller
         return view('find');
     }
 
+    public function password($name)
+    {
+        if($name != '')
+        {
+            $button = Button::where('name', $name)->first();
+        }
+        else
+        {
+            $button = null;
+        }
+
+        return view('password', compact('button'));
+    }
+
+    public function passwordValidate($name)
+    {
+        $input = Input::all();
+        $button = Button::where('name', $name)->first();
+        $pass = $button->password;
+
+        if (Hash::check($input['password'], $pass))
+        {
+            return view('button', compact('button'));
+        }
+
+    }
+
     public function search()
     {
         $input = Input::all();
-        dd($input);
+        return redirect('/b/'.$input['name']);
     }
 
     public function show($name)
@@ -64,9 +95,9 @@ class ButtonController extends Controller
         $button = Button::where('name', $name)->first();
 
         if($button->password)
-            // how to store [authenticated] cookie
-            // and if not [authenticated] prompt for a password again
-            return redirect('find');
+        {
+            return redirect('/p/'.$button->name);
+        }
         else
             return view('button', compact('button'));
 

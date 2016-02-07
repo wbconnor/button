@@ -17,6 +17,10 @@ $app->get('/new', 'ButtonController@create');
 $app->post('/new', 'ButtonController@store');
 
 $app->get('/b/{name}', 'ButtonController@show');
+$app->post('/b/{name}', 'ButtonController@show');
+
+$app->get('/p/{name}', 'ButtonController@password');
+$app->post('/p/{name}', 'ButtonController@passwordValidate');
 
 $app->get('/find', 'ButtonController@find');
 $app->post('/find', 'ButtonController@search');
