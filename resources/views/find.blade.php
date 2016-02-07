@@ -4,6 +4,8 @@
 
     <form action="/find" method="post" class="form-horizontal" id="findButtonForm">
 
+        <!-- TODO: add AJAX validation of button name -->
+
         <div class="controls-group">
             <label class="control-label">
                 What's your button's name?

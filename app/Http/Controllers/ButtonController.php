@@ -52,11 +52,13 @@ class ButtonController extends Controller
         }
     }
 
+    // lookup a button that exists already
     public function find()
     {
         return view('find');
     }
 
+    // get the password of a protected button
     public function password($name)
     {
         if($name != '')
@@ -71,12 +73,14 @@ class ButtonController extends Controller
         return view('password', compact('button'));
     }
 
+    // validate a users attempt to access to a protected button
     public function passwordValidate($name)
     {
         $input = Input::all();
         $button = Button::where('name', $name)->first();
         $pass = $button->password;
 
+        // hash check compares the two hashed passwords together
         if (Hash::check($input['password'], $pass))
         {
             return view('button', compact('button'));
@@ -84,6 +88,7 @@ class ButtonController extends Controller
 
     }
 
+    // basically just a wrapper to show()
     public function search()
     {
         $input = Input::all();
