@@ -32,7 +32,7 @@ class ButtonController extends Controller
             $button = Button::create($input);
 
             // send user to the new button
-            return view('button', compact('button'));
+            return redirect('/b/'.$button->name);
         }
         else
         {
@@ -61,7 +61,14 @@ class ButtonController extends Controller
 
     public function show($name)
     {
+        $button = Button::where('name', $name)->first();
 
-        return view('button');
+        if($button->password)
+            // how to store [authenticated] cookie
+            // and if not [authenticated] prompt for a password again
+            return redirect('find');
+        else
+            return view('button', compact('button'));
+
     }
 }

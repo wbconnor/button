@@ -16,7 +16,7 @@ $app->get('/', 'IndexController@index');
 $app->get('/new', 'ButtonController@create');
 $app->post('/new', 'ButtonController@store');
 
-$app->get('/button/{name}', 'ButtonController@show');
+$app->get('/b/{name}', 'ButtonController@show');
 
 $app->get('/find', 'ButtonController@find');
 $app->post('/find', 'ButtonController@search');

@@ -16,7 +16,8 @@ class CreateButtonsTable extends Migration
         {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('password');
+            $table->string('password')->nullable();
+            $table->integer('clicks')->unsigned()->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
