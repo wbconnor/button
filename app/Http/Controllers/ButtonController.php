@@ -27,4 +27,10 @@ class ButtonController extends Controller
         $input = Input::all();
         dd($input);
     }
+
+    public function show($name)
+    {
+
+        return view('button');
+    }
 }
