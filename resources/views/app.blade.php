@@ -21,6 +21,12 @@
 
 		@yield('content')
 
+		@if(isset($error_message))
+            <div class="alert alert-warning">
+                {{ $error_message }}
+            </div>
+        @endif
+
 	</div>
 
 	@yield('foot-script')

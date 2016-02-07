@@ -37,7 +37,11 @@ class ButtonController extends Controller
         else
         {
             // alert the  user that a button already exists
-            // TODO: return to previous screen with data
+
+            $name = Button::where('name', $input['name'])->first()->name;
+            $error_message = 'That button name is taken';
+
+            return view('create', compact('name', 'error_message'));
 
             // display the existing button to the user
             dd(Button::where('name', $input['name'])->first());
