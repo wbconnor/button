@@ -29,24 +29,19 @@ class ButtonController extends Controller
         if(!Button::where('name', $input['name'])->first())
         {
             // continue with creating a new button if one does not exist
-            dd('not button');
+            $button = Button::create($input);
+
+            // send user to the new button
+            return view('button', compact('button'));
         }
         else
         {
-            // alert the  user a button already exists
+            // alert the  user that a button already exists
             // TODO: return to previous screen with data
 
             // display the existing button to the user
             dd(Button::where('name', $input['name'])->first());
         }
-
-        if($input['password'])
-        {
-            dd($input['password']);
-        }
-
-        Button::create($input);
-        dd(Button::all());
     }
 
     public function find()
