@@ -24,3 +24,5 @@ $app->post('/p/{name}', 'ButtonController@passwordValidate');
 
 $app->get('/find', 'ButtonController@find');
 $app->post('/find', 'ButtonController@search');
+
+$app->get('/click/{name}', 'ButtonController@click');

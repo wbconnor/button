@@ -107,4 +107,13 @@ class ButtonController extends Controller
             return view('button', compact('button'));
 
     }
+
+    public function click($name)
+    {
+        $button = Button::where('name', $name)->first();
+
+        // increment click
+
+        // return current total of clicks
+    }
 }

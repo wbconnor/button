@@ -4,21 +4,18 @@
  * 20160204
  */
 
-//document.getElementById("button").addEventListener("click", btn_clicked);
-
-document.getElementById("new_button").addEventListener("click", function(){
-    window.location.href = "/new";
-});
-document.getElementById("find_button").addEventListener("click", function(){
-    window.location.href = "/find";
-});
+document.getElementById("button").addEventListener("click", btn_clicked);
 
 function btn_clicked() {
 
-    var button = "button";
+    var button = document.getElementById("button_name").innerHTML;
 
-    var data_file = location.protocol + location.host + button + "/click",
+    // location.protocol + location.host +
+
+    var data_file = "/click/" + button,
         http_request = new XMLHttpRequest();
+
+    console.log(data_file);
 
     try{
         // Opera 8.0+, Firefox, Chrome, Safari
