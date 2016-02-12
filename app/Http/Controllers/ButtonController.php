@@ -114,10 +114,14 @@ class ButtonController extends Controller
     {
         $button = Button::where('name', $name)->first();
 
-        $response = ['name' => $button->name, 'clicks' => $button->clicks];
+        $clicks = $button->clicks;
 
-        // increment click
+        ++$clicks;
 
-        // return current total of clicks
+        $button->update(['clicks' => $clicks]);
+
+        $response = ['clicks' => $clicks];
+
+        return json_encode($response);
     }
 }

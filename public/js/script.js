@@ -44,9 +44,13 @@ function btn_clicked() {
             // Javascript function JSON.parse to parse JSON data
             var jsonObj = JSON.parse(http_request.responseText);
 
+            var clicks = jsonObj.clicks;
+
+            console.log('clicks = ' + clicks);
+
             // jsonObj variable now contains the data structure and can
             // be accessed as jsonObj.name and jsonObj.country.
-            document.getElementById("Name").innerHTML = jsonObj.clicks;
+            document.getElementById("clicks").innerHTML = clicks;
         }
     }
 
