@@ -29,8 +29,8 @@ class ButtonController extends Controller
         // check if a button with the same name already exists
         if(!Button::where('name', $input['name'])->first())
         {
-            // hash password
-            $input['password'] = Hash::make($input['password']);
+            // if password is submitted, hash it
+            $input['password'] == "" ? $input['password'] = null : $input['password'] = Hash::make($input['password']);
 
             // continue with creating a new button if one does not exist
             $button = Button::create($input);
@@ -95,6 +95,7 @@ class ButtonController extends Controller
         return redirect('/b/'.$input['name']);
     }
 
+    // check if button is protected, either send to validation or show button
     public function show($name)
     {
         $button = Button::where('name', $name)->first();
@@ -104,13 +105,16 @@ class ButtonController extends Controller
             return redirect('/p/'.$button->name);
         }
         else
+        {
             return view('button', compact('button'));
-
+        }
     }
 
     public function click($name)
     {
         $button = Button::where('name', $name)->first();
+
+        $response = ['name' => $button->name, 'clicks' => $button->clicks];
 
         // increment click
 

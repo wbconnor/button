@@ -14,6 +14,7 @@ Class Button extends Model
     protected $fillable = [
         'name',
         'password',
+        'clicks',
         'created_at',
         'updated_at',
     ];
