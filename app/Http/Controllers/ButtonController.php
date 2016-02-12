@@ -85,6 +85,12 @@ class ButtonController extends Controller
         {
             return view('button', compact('button'));
         }
+        else
+        {
+            $error_message = 'sorry, that\'s not the password we have';
+            return view('find', compact('name', 'error_message'));
+        }
+
 
     }
 

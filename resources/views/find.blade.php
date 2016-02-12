@@ -12,7 +12,13 @@
             </label>
 
             <div class="controls">
-                <input type="text" name="name" tabindex="1">
+
+                @if(isset($name))
+                    <input type="text" name="name" tabindex="1" value="{{ $name }}">
+                @else
+                    <input type="text" name="name" tabindex="1">
+                @endif
+
             </div>
         </div>
 
