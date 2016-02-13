@@ -94,7 +94,7 @@ class ButtonController extends Controller
 
     }
 
-    // basically just a wrapper to show()
+    // basically just a wrapper for show()
     public function search()
     {
         $input = Input::all();

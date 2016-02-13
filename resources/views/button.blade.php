@@ -15,9 +15,9 @@ if(!isset($button))
     @endif
     <div class="clicks" id="clicks">
         @if(isset($button->clicks))
-            {{ $button->clicks }}
+            <h1>{{ $button->clicks }}</h1>
         @else
-            number of button clicks
+            <h2>number of button clicks</h2>
         @endif
     </div>
 </div>

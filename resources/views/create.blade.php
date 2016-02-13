@@ -2,6 +2,7 @@
 
 @section('content')
 
+    <div class="center-element col-md-5"
     <form action="/new" method="post" class="form-horizontal" id="newButtonForm">
 
         <div class="controls-group">
@@ -11,9 +12,9 @@
 
             <div class="controls">
                 @if(isset($name))
-                    <input type="text" name="name" value="{{ $name }}" tabindex="1">
+                    <input type="text" name="name" class="textbox" value="{{ $name }}" tabindex="1">
                 @else
-                    <input type="text" name="name" tabindex="1">
+                    <input type="text" name="name" class="textbox" tabindex="1">
                 @endif
             </div>
         </div>
@@ -24,7 +25,7 @@
             </label>
 
             <div class="controls">
-                <input type="password" name="password" tabindex="2">
+                <input type="password" name="password" class="textbox" tabindex="2">
             </div>
         </div>
 
@@ -36,3 +37,4 @@
 @section('foot-script')
     <script src="/js/script.js"></script>
 @endsection
+

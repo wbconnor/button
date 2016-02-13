@@ -46,11 +46,9 @@ function btn_clicked() {
 
             var clicks = jsonObj.clicks;
 
-            console.log('clicks = ' + clicks);
-
             // jsonObj variable now contains the data structure and can
             // be accessed as jsonObj.name and jsonObj.country.
-            document.getElementById("clicks").innerHTML = clicks;
+            document.getElementById("clicks").innerHTML = '<h1>' + clicks + '</h1>';
         }
     }
 
