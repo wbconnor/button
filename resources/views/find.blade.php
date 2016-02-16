@@ -23,7 +23,9 @@
                 </div>
             </div>
 
-            <input type="submit">
+            <div class="submit-container">
+                <input type="submit" class="circle-button">
+            </div>
 
         </form>
     </div>

@@ -24,6 +24,11 @@ body {
     margin: 3em auto;
 }
 
+.submit-container {
+    width: 7em;
+    height: 7em;
+}
+
 /*
  * inspired by http://jsfiddle.net/user/josedvq/fiddles/
  * and http://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate3
@@ -36,6 +41,7 @@ body {
     cursor: pointer;
     outline: none;
     color: #fff;
+    font-weight: bold;
     background-color: #ca2128;
     border: none;
     border-radius: 15em;
