@@ -2,3 +2,16 @@
 .env
 .idea/
 composer.lock
+public/.htaccess
+composer.phar
+composer.phar1
+error_log
+php.ini
+public/backup.htaccess
+public/composer.phar
+public/error_log
+public/php.ini
+tests/error_log
+backup.htaccess
+.gitignore
+public/.htaccess
